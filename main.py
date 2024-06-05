@@ -27,12 +27,12 @@ print(sqlite_db)
 
 conn=sqlite3.connect(sqlite_db) # Creates sqlite Database - check in your file explorer
 cur=conn.cursor()
-cur.execute('''DROP TABLE IF EXISTS sensor_values''')
-cur.execute('''CREATE TABLE sensor_values(timestamp NUMERIC,temperature NUMERIC, humidity NUMERIC);''') # Create table with specified name and columns/attributes
+#cur.execute('''DROP TABLE IF EXISTS sensor_values''')
+#cur.execute('''CREATE TABLE sensor_values(timestamp NUMERIC,temperature NUMERIC, humidity NUMERIC);''') # Create table with specified name and columns/attributes
 # 
 
-for my_counter in range(15):
-    time.sleep(30)
+for my_counter in range(9):
+    time.sleep(60)
     my_timestamp = round(time.time())
     hum_value=requests.get(my_hum_url)
     temp_value=requests.get(my_temp_url)
