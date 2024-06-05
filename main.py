@@ -32,7 +32,7 @@ cur.execute('''CREATE TABLE sensor_values(timestamp NUMERIC,temperature NUMERIC,
 # 
 
 for my_counter in range(15):
-    time.sleep(60)
+    time.sleep(30)
     my_timestamp = round(time.time())
     hum_value=requests.get(my_hum_url)
     temp_value=requests.get(my_temp_url)
