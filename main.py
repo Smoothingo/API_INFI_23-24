@@ -3,11 +3,11 @@ import json
 import time
 #Die Authentifizierung wird im lokalen Netzwerk noch nicht benötigt, aber im nächsten Schritt
 #from requests.auth import HTTPBasicAuth
-my_hum_url = 'http://192.168.1.101:8080/rest/items/ZWave_Node_005_Sensor_relative_humidity'
-my_temp_url = 'http://192.168.1.101:8080/rest/items/ZWave_Node_005_Sensor_temperature'
+my_hum_url = 'http://openhabian:8080/rest/items/ZWave_Node_003_Sensor_relative_humidity'
+my_temp_url = 'http://openhabian:8080/rest/items/ZWave_Node_003_Sensor_temperature'
 
-#my_hum_url='http://192.168.68.112:8080/rest/items/ZWaveNode019WohnzimmerZW100Multisensor6_Sensorrelativehumidity'
-#my_temp_url='http://192.168.68.112:8080/rest/items/ZWaveNode019WohnzimmerZW100Multisensor6_Sensortemperature'
+#my_hum_url='openhabian:8080/rest/items/ZWaveNode019WohnzimmerZW100Multisensor6_Sensorrelativehumidity'
+#my_temp_url='openhabian:8080/rest/items/ZWaveNode019WohnzimmerZW100Multisensor6_Sensortemperature'
 hum_value=requests.get(my_hum_url)
 temp_value=requests.get(my_temp_url)
 # Das JSON-Objekt wird über die Ausgabe der Requests-Objekt übergeben
